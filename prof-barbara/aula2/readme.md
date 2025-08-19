@@ -1,0 +1,1 @@
+Em resumo, criei uma página web com um elemento interativo que altera o texto na página quando um usuário clica em um botão.

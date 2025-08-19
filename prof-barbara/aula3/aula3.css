@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(19, 19, 209);
+    margin: 50px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+h1{
+    color: blue;
+}
+.container{
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: white;
+    font-size: 20px;
+    text-align: center;
+}
+input{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+button{
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+    color: blue;
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
