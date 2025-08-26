@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PrInt - Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <img src="img/logo.png" alt="Logo PrInt" class="logo">
+
+        <!-- Frase -->
+        <h1>
+            A plataforma que vai <strong>REVOLUCIONAR</strong> o cuidado com a saúde através da Tecnologia.
+        </h1>
+
+        <!-- Botões -->
+        <div class="botoes">
+            <button onclick="abrirLogin()">Entrar</button>
+            <button onclick="abrirCadastro()">Cadastrar</button>
+            <button onclick="irParaSobre()">Sobre</button>
+        </div>
+    </div>
+
+    <!-- Modal de Login -->
+    <div id="modalLogin" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal('modalLogin')">&times;</span>
+            <h2>Login</h2>
+            <input type="text" id="loginUsuario" placeholder="Usuário"><br>
+            <input type="password" id="loginSenha" placeholder="Senha"><br>
+            <button onclick="fazerLogin()">Entrar</button>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div id="modalCadastro" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal('modalCadastro')">&times;</span>
+            <h2>Cadastrar</h2>
+            <input type="email" id="cadastroEmail" placeholder="E-mail"><br>
+            <input type="text" id="cadastroUsuario" placeholder="Usuário"><br>
+            <input type="password" id="cadastroSenha" placeholder="Senha"><br>
+            <button onclick="fazerCadastro()">Cadastrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
