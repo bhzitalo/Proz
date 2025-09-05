@@ -1,0 +1,107 @@
+/* Eu deixo o body flex para empurrar o rodapé pro fim */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fundo com blur, agora usando pseudo-elemento para não bloquear rolagem */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/salvador.jpg') no-repeat center center/cover;
+  filter: blur(6px) brightness(0.7);
+  z-index: -1; /* fico atrás do conteúdo */
+  transition: opacity 1.5s ease-in-out;
+  opacity: 1;
+}
+
+/* Cabeçalho */
+header {
+  background: rgba(255, 204, 0, 0.9);
+  color: #003366;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
+
+/* Main ocupa o restante do espaço */
+main {
+  flex: 1;
+  position: relative;
+  z-index: 1; /* garante que o conteúdo fique acima do background */
+}
+
+/* Grid de cartões de destinos */
+.destinos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Cartões */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Seção de descrição do destino */
+#resultado {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: left;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Imagem do destino */
+#resultado img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+/* Rodapé */
+footer {
+  padding: 15px;
+  background: rgba(0,51,102,0.9);
+  color: white;
+  position: relative;
+  z-index: 1;
+}

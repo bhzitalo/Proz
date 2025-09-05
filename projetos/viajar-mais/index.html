@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajar Mais</title>
+  <!-- Aqui eu linko o CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho do site -->
+  <header>
+    <h1>Viajar Mais</h1>
+    <p>Escolha seu próximo destino dos sonhos ✈️</p>
+  </header>
+  
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Seção de cartões de destinos -->
+    <section class="destinos">
+      <div class="card" onclick="carregarDestino('salvador')">
+        <h2>Salvador - BA</h2>
+      </div>
+      <div class="card" onclick="carregarDestino('natal')">
+        <h2>Natal - RN</h2>
+      </div>
+      <div class="card" onclick="carregarDestino('santiago')">
+        <h2>Santiago - Chile</h2>
+      </div>
+      <div class="card" onclick="carregarDestino('buenosaires')">
+        <h2>Buenos Aires - Argentina</h2>
+      </div>
+      <div class="card" onclick="carregarDestino('amsterdam')">
+        <h2>Amsterdam - Holanda</h2>
+      </div>
+      <div class="card" onclick="carregarDestino('capadocia')">
+        <h2>Capadócia - Turquia</h2>
+      </div>
+    </section>
+
+    <!-- Seção para exibir descrição e imagem do destino -->
+    <section id="resultado"></section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>© 2025 Viajar Mais - Todos os direitos reservados</footer>
+
+  <!-- Aqui eu linko o JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>
